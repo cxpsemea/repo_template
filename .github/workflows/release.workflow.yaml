@@ -7,13 +7,16 @@ on:
       - "beta"
       - "next"
 
+permissions:
+  contents: read
+
 jobs:
   build:
     name: build
     runs-on: ubuntu-18.04
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@50fbc622fc4ef5163becd7fab6573eac35f8462e # v1.2.0
 
       - name: prepare environment
         run: echo SKIPPING
